@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#960000</color>
+    <color name="colorPrimaryDark">#7D0000</color>
+    <color name="colorAccent">#304FFE</color>
+
+    <!-- Cores do APP -->
+    <color name="colorBackground">#242424</color>
+    <color name="colorTextLight">#FFFFFF</color>
+
+</resources>
