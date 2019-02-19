@@ -1,6 +1,9 @@
 package com.betobatista.xurras.repository;
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import com.betobatista.xurras.constants.DatabaseConstants;
@@ -20,7 +23,7 @@ import static com.betobatista.xurras.constants.DatabaseConstants.TABLES.AMIGOS.T
 
 public class DAOLite extends SQLiteOpenHelper {
 
-    public DAOLite(Context context) {
+    DAOLite(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VER);
     }
 
@@ -32,6 +35,12 @@ public class DAOLite extends SQLiteOpenHelper {
                                                                           + KEY_CASH + " REAL)";
         sqLiteDatabase.execSQL(CREATE_CONFIG_TABLE);
 
+        // Incialize Amigo //
+        ContentValues values = new ContentValues();
+        values.put(KEY_NAME, "Eu");
+        values.put(KEY_SEX, "Homem");
+        values.put(KEY_CASH, 0);
+        sqLiteDatabase.insert(TABLE_NAME, null, values);
 
     }
 
@@ -44,6 +53,34 @@ public class DAOLite extends SQLiteOpenHelper {
         onCreate(sqLiteDatabase);
 
     }
+
+    Cursor dbSelect(String query){
+        SQLiteDatabase database = this.getWritableDatabase();
+        Cursor cursor = database.rawQuery(query, null);
+        //database.close();
+        return cursor;
+    }
+
+    void dbInsert(String table, ContentValues values){
+        SQLiteDatabase database = this.getWritableDatabase();
+        database.insert(table, null, values);
+        //database.close();
+    }
+
+    public void dbUpdate(String table, ContentValues values, String where, String[] conditions){
+        SQLiteDatabase database = this.getWritableDatabase();
+        database.update(table, values, where, conditions);
+        //database.close();
+    }
+
+    public void dbDelete(String table, String where, String[] conditions){
+        SQLiteDatabase database = this.getWritableDatabase();
+        database.delete(table, where, conditions);
+        //database.close();
+    }
+
+
+
     /*
 
     public void addConfig(ConfigObjeto objeto){
