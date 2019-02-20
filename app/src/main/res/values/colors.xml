@@ -7,5 +7,6 @@
     <!-- Cores do APP -->
     <color name="colorBackground">#242424</color>
     <color name="colorTextLight">#FFFFFF</color>
+    <color name="colorDivider">#646464</color>
 
 </resources>

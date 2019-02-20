@@ -40,12 +40,17 @@ public class AmigoRepository {
         return list;
     }
 
-    public void insert(String nmAmigo, String sxAmigo, double vlAmigo){
-        lite = new DAOLite(context);
-        ContentValues values = new ContentValues();
-        values.put(KEY_NAME, nmAmigo);
-        values.put(KEY_SEX, sxAmigo);
-        values.put(KEY_CASH, vlAmigo);
-        lite.dbInsert(TABLE_NAME, values);
+    public boolean insert(String nmAmigo, String sxAmigo, double vlAmigo){
+        try{
+            lite = new DAOLite(context);
+            ContentValues values = new ContentValues();
+            values.put(KEY_NAME, nmAmigo);
+            values.put(KEY_SEX, sxAmigo);
+            values.put(KEY_CASH, vlAmigo);
+            lite.dbInsert(TABLE_NAME, values);
+            return true;
+        } catch (Exception e){
+            return false;
+        }
     }
 }
