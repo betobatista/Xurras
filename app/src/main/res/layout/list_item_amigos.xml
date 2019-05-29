@@ -17,7 +17,7 @@
             android:id="@+id/txtNmAmigo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nome Amigo"
+            android:text="@string/txtNmAmigo"
             android:textColor="@color/colorTextLight"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"/>
 
@@ -33,7 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:text="Sexo"
+                android:text="@string/txtSexAmigo"
                 android:textColor="@color/colorTextLight"/>
 
             <android.support.v7.widget.AppCompatTextView
@@ -41,8 +41,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Cash"
-                android:gravity="right"
+                android:text="@string/txtCashAmigo"
+                android:gravity="end"
                 android:textColor="@color/colorTextLight"/>
 
         </LinearLayout>
