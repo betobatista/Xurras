@@ -1,12 +1,15 @@
 <resources>
-    <string name="app_name">Xurras</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
-    <string name="txtNmAmigo">Nome Amigo</string>
-    <string name="txtSexAmigo">Sexo</string>
-    <string name="txtCashAmigo">Cash</string>
+    <string name="app_name">CashParty</string>
+    <string name="text_name_friend">Nome Amigo</string>
+    <string name="text_sex_friend">Sexo</string>
+    <string name="text_cash_friend">Cash</string>
+    <string name="friend_name">Nome</string>
+    <string name="friend_sex">Sexo</string>
+    <string name="sex_male">Masculino</string>
+    <string name="sex_female">Feminino</string>
+    <string name="btn_cancel">Cancelar</string>
+    <string name="btn_confirm">Confirmar</string>
+    <string name="title_event">Eventos</string>
+    <string name="title_friend">Amigos</string>
+    <string name="title_cash">Caixa</string>
 </resources>
